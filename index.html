@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Persian Word Extractor</title>
+    <meta charset="utf-8" />
+    <link href="style_main.css" type="text/css" rel="stylesheet"/>
+    <style>
+      section{
+        grid-template-rows: 300px 70px 50px;
+        align-items: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>     
+        <select id="pageselector">
+          <option value="index.html" selected>Dictionary</option>
+          <option value="query.html">Word Maker</option>
+          <option value="config.html">Configuration</option>
+        </select>
+        <img class="icon" src="favicon.png" />
+    </header>
+    <section>
+     
+      <textarea id="word_display" style="display: block" readonly > </textarea>  
+        <button id="downloadbutton" class="normalButton" onclick="downloadbank">
+          Copy To Clipboard
+        </button>
+        <h1 style="margin-top: 10px;" >Dictionary Size: <span id="counter"></span></h1>      
+    </section>
+    <footer>Copyright 2023 - Created By Timewalker</footer>
+    <script src="layout_script.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Persian Word Extractor</title>
+    <meta charset="utf-8" />
+    <link href="style_main.css" type="text/css" rel="stylesheet"/>
+    <style>
+
+      .filter input{
+      box-sizing: border-box;
+      width: 90%;
+      border: none;
+      outline: none;
+      font-size: x-large;
+      text-align: center;  
+      justify-self: center; 
+      border-radius: 10px;
+      }
+      .filter{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100%;
+        
+      }
+      section{
+        grid-template-rows: 50px 70px 300px;
+
+      }
+      @media (prefers-color-scheme: dark) {
+        input{
+            background-color: rgb(40, 40, 40);
+          color: rgb(220, 220, 220);
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header>     
+        <select id="pageselector">
+          <option value="index.html" >Dictionary</option>
+          <option value="query.html" selected>Word Maker</option>
+          <option value="config.html">Configuration</option>
+        </select>
+        <img class="icon" src="favicon.png" />
+    </header>
+    <section>
+    <!-- all the code goes through here-->
+    <div class="filter">
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+        <input  maxlength="1"/>
+        <input maxlength="1"/>
+        <input maxlength="1"/>
+    </div>
+    
+    <button id="btnFind" class="normalButton">Find</button>
+    <textarea id="txtResult">
+
+    </textarea>
+    </section>
+    <footer>Copyright 2023 - Created By Timewalker</footer>
+    <script src="layout_script.js"></script>
+    <script src="query_script.js"></script>
+  </body>
+</html>

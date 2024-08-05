@@ -1,0 +1,28 @@
+{
+    "name": "Persian Word Extractor",
+    "version": "1.0.0",
+    "description": "Finds all persian words inside the pages you visit and stores them",
+    "manifest_version": 3,
+    "author": "Timewalker",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],           
+            "js": ["content_script.js"]
+        }
+    ],
+    "permissions": [
+        "storage", "scripting"
+      ],
+    "action":{
+        
+        "default_popup": "index.html",
+        "default_title": "Persian Word Extractor"
+    },
+    "background": {
+        "service_worker": "service-worker.js"
+      },
+      "icons": {
+       
+        "128": "favicon.png"
+      }
+}

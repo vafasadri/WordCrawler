@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Persian Word Extractor</title>
+    <meta charset="utf-8" />
+    <link href="style_main.css" type="text/css" rel="stylesheet"/>
+    <style>
+      section{
+        grid-template-rows: 1fr 100px;
+      }
+      form{
+       
+        display: grid;
+        grid-template-rows: 100px 100px;      
+        grid-template-columns: 30% 70%;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+      }
+      .normalButton{
+        justify-self: center;
+      }
+      
+      input[type=text]{
+        box-sizing: border-box;
+        height: 75%;
+        border: none;
+       outline: none;
+       font-size: x-large;
+       text-align: center;  
+       justify-self: center; 
+       align-self: center;
+       border-radius: 20px;       
+      }
+      label{
+        height: auto;
+        align-self: center;
+        font-size: medium;
+      }
+      @media (prefers-color-scheme: dark) {
+        input[type=text]{
+            background-color: rgb(40, 40, 40);
+          color: rgb(220, 220, 220);
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header>     
+        <select id="pageselector">
+          <option value="index.html" >Dictionary</option>
+          <option value="query.html" >Word Maker</option>
+          <option value="config.html" selected>Configuration</option>
+        </select>
+        <img class="icon" src="favicon.png" />
+    </header>
+    <section>
+    <!-- all the code goes through here-->
+    
+       <form>
+       
+        <label for="txtFilter">Allowed Characters: </label>
+        <input name="txtFilter" type="text"/>        
+        <label for="txtDelimiters">Splitter Characters: </label>
+        <input name="txtDelimiters" type="text"/>             
+       </form>    
+       <button class="normalButton" id="btnApply">Apply</button>  
+      
+    </section>
+    <footer>Copyright 2023 - Created By Timewalker</footer>
+    <script src="config_script.js"></script>
+    <script src="layout_script.js"></script>
+  </body>
+</html>
